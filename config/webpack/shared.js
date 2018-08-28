@@ -31,6 +31,8 @@ module.exports = {
       'pages': path.resolve(__dirname, '../../assets/js/pages'),
       'components': path.resolve(__dirname, '../../assets/js/components'),
       'styles': path.resolve(__dirname, '../../assets/styles'),
+
+      'shared$': path.resolve(__dirname, '../../assets/styles/shared.scss'),
     }
   },
 
@@ -44,13 +46,17 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
+        from: './manifest.json',
+        to: path.resolve(__dirname, '../..', '.tmp', 'public', 'manifest.json')
+      },
+      {
         from: './images',
         to: path.resolve(__dirname, '../..', '.tmp', 'public', 'images')
       },
       {
         from: './fonts',
         to: path.resolve(__dirname, '../..', '.tmp', 'public', 'fonts')
-      }
+      },
     ]),
   ],
 

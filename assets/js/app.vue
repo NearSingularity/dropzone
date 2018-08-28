@@ -1,10 +1,14 @@
-<style>
+<style lang="scss" scoped>
+  @import 'shared';
+
+  main {
+    font-family: $base-font;
+  }
 
 </style>
 
 <template>
   <main>
-    <h1>Sails + Vue</h1>
     <router-view></router-view>
   </main>
 </template>

@@ -9,12 +9,13 @@ module.exports = {
       loader: 'css-loader',
       options: {
         // modules: true
+        importLoaders: 1,
       }
     }, {
       loader: 'sass-loader',
-      options: { sourceMap: true }
     }, {
       loader: 'postcss-loader',
+      options: { sourceMap: true }
     },
   ]
 };
